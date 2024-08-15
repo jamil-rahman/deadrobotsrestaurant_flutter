@@ -26,8 +26,8 @@ class _ThankYouPageState extends State<ThankYouPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Thank You'),
-        backgroundColor: Colors.blue,
+        title: const Text('Thank You', style: const TextStyle(color: Colors.white)),
+        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Container(
