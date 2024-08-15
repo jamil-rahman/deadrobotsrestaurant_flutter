@@ -26,8 +26,6 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         child: Column(
-          //To align everything center, need to use both
-          //cross and main axis
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
