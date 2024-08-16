@@ -62,7 +62,7 @@ class _ThankYouPageState extends State<ThankYouPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'Your order is on the way',
                 style: TextStyle(
                   color: Colors.white,
@@ -85,7 +85,7 @@ class _ThankYouPageState extends State<ThankYouPage> {
                   minimumSize: const Size(200, 50),
                 ),
                 child: const Text(
-                  'Go to Products',
+                  'Order Again!',
                   style: TextStyle(color: Colors.white),
                 ),
               ),

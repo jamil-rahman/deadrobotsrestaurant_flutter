@@ -17,8 +17,7 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
-      body:
-      Container(
+      body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/background.png'),
@@ -29,7 +28,11 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('images/logo.png', height: 150),
+            // Hero widget for my logo_source
+            Hero(
+              tag: 'logoHero',
+              child: Image.asset('images/logo.png', height: 150),
+            ),
             const SizedBox(height: 50),
             Text(
               _textState,
@@ -46,7 +49,8 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/product');
               },
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                padding:
+                const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 textStyle: const TextStyle(fontSize: 18),
                 backgroundColor: Colors.deepOrangeAccent,
               ),
