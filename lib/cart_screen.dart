@@ -16,6 +16,8 @@ class _CartScreenState extends State<CartScreen> {
   final _nameController = TextEditingController();
   final _addressController = TextEditingController();
   final _phoneController = TextEditingController();
+  final _provinceController = TextEditingController();
+  final _postalController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -115,6 +117,34 @@ class _CartScreenState extends State<CartScreen> {
                         }
                         else if(int.tryParse(value) == null){
                           return 'Please enter the valid phone number';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 20),
+                    TextFormField(
+                      controller: _provinceController,
+                      decoration: const InputDecoration(
+                        labelText: 'Province',
+                        border: OutlineInputBorder(),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your Province';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 20),
+                    TextFormField(
+                      controller: _postalController,
+                      decoration: const InputDecoration(
+                        labelText: 'Postal Code',
+                        border: OutlineInputBorder(),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your Postal Code';
                         }
                         return null;
                       },
